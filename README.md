@@ -1,7 +1,4 @@
 # ws
-A weather forecast tool running in the shell. (Only be valid for China now)
-
-# ws
 
 >    'ws' means 'weather shell', it helps you to get the live weather or weather forecast of a place in a terminal. The weather datas based on GAODE weather forecast api.
 
