@@ -53,7 +53,7 @@ sub show_forecast {
         my $nightweather = $cast->{"nightweather"};
         my $daytemp = $cast->{"daytemp"};
         my $nighttemp = $cast->{"nighttemp"};
-        printf "%s    %s          %4s          %-5s          %s            %s\n", $date, $week, $dayweather, $nightweather, $daytemp, $nighttemp
+        printf "%s    %s          %-5s          %-5s          %s            %s\n", $date, $week, $dayweather, $nightweather, $daytemp, $nighttemp
     }
 }
 
