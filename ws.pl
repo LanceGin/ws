@@ -39,7 +39,22 @@ sub show_live {
 
 sub show_forecast {
     my $data = $_[0];
-    say $data;
+    my $forecast = $data->{"forecasts"}->[0];
+    say "您好！您查询的".$forecast->{"city"}."近期天气情况如下：";
+    say "---------------------------------------------------------------------------";
+    say "   日期      星期      白天天气      晚上天气      最低气温      最高气温";
+    say "---------------------------------------------------------------------------";
+    my $casts = $forecast->{"casts"};
+    for (my $i = 0; $i < 4; $i++) {
+        my $cast = $casts->[$i];
+        my $date = $cast->{"date"};
+        my $week = $cast->{"week"};
+        my $dayweather = $cast->{"dayweather"};
+        my $nightweather = $cast->{"nightweather"};
+        my $daytemp = $cast->{"daytemp"};
+        my $nighttemp = $cast->{"nighttemp"};
+        say $date."    ".$week."          ".$dayweather."          ".$nightweather."    ".$nighttemp."    ".$daytemp;
+    }
 }
 
 my %opt;
